@@ -50,7 +50,6 @@ main {
 }
 
 .smartphone {
-    height: 75vh;
     max-width: 275px;
     margin: auto;
     box-shadow: 0 12.5px 10px var(--lightGreyishViolet),
