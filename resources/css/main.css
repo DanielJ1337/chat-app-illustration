@@ -23,7 +23,7 @@ html {
 
 main {
     height: 100vh;
-    width: 60vw;
+    width: 65vw;
     margin: auto auto;
     display: flex;
     align-items: center;
@@ -34,6 +34,7 @@ main {
 @media only screen and (max-width: 1024px) {
     main {
         margin: 10rem auto;
+        width: 374px;
         max-height: 100vh;
         flex-direction: column;
     }
@@ -50,19 +51,27 @@ main {
     height: 75vh;
     max-width: 275px;
     margin: auto;
-    box-shadow: 5px 5px 50px 2px hsl(270, 20%, 96%);
-    border-radius: 25px;
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px;
-    -ms-border-radius: 25px;
-    -o-border-radius: 25px;
+    box-shadow: 5px 5px 15px 5px hsl(270, 20%, 96%);
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
     padding: 1rem;
 }
 
-.smartphone__back-icon,
-.smartphone__menu-icon {
-    width: 12px;
+.smartphone__back-icon {
+    width: 7px;
     height: auto;
+}
+
+.smartphone__menu-icon {
+    height: 12px;
+}
+
+.smartphone__back-icon:hover,
+.smartphone__menu-icon:hover {
+    cursor: pointer;
 }
 
 .smartphone__navigation {
@@ -180,8 +189,8 @@ main {
 .smartphone__check-button-container {
     background: linear-gradient(
         90deg,
-        rgba(136, 56, 255, 1) 0%,
-        rgba(233, 66, 255, 1) 100%
+        rgba(233, 66, 255, 1) 0%,
+        rgba(136, 56, 255, 1) 100%
     );
     margin: 1rem 0;
     width: 70%;
@@ -282,6 +291,44 @@ main {
     font-size: 1.05rem;
     color: var(--lightGreyishViolet);
     border: none;
-
+    position: relative;
     width: 92%;
+}
+
+#input:focus {
+    outline: none;
+}
+
+.smartphone__input-container {
+    display: flex;
+    position: relative;
+}
+
+.smartphone__send-arrow {
+    background-color: var(--veryDarkDesaturatedViolet);
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    padding: 0.5rem;
+    position: absolute;
+    right: 0;
+    color: #fff;
+    margin-top: 3.5px;
+    margin-right: 0.5rem;
+}
+
+.smartphone__send-arrow span {
+    margin-left: 0.5rem;
+    display: grid;
+    place-items: center;
+}
+
+.smartphone__send-arrow svg {
+    width: 7px;
+    margin-bottom: 25px;
+    margin-left: 5px;
 }
